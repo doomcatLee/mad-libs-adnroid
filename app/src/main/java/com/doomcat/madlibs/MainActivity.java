@@ -13,7 +13,7 @@ import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     @Bind(R.id.playButton) Button mPlayButton;
     @Bind(R.id.titleTextView) TextView mTitleTextView;
@@ -29,17 +29,19 @@ public class MainActivity extends AppCompatActivity {
 
         //TYPEFACES
         Typeface titleFont = Typeface.createFromAsset(getAssets(), "fonts/albas.ttf");
-        //SET TYPEFONT
         mTitleTextView.setTypeface(titleFont);
 
+        //Using and binding the interface onclick event
+        mPlayButton.setOnClickListener(this);
 
-        //Attach click event listener
-        mPlayButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent intent = new Intent(MainActivity.this, OptionsActivity.class);
-                startActivity(intent);
-            }
-        });
     }
+
+    @Override
+    public void onClick(View v) {
+        if(v == mPlayButton){
+            Intent intent = new Intent(MainActivity.this, OptionsActivity.class);
+            startActivity(intent);
+        }
+    }
+
 }
