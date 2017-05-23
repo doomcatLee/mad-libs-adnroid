@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".FormActivity" />
-        <activity android:name=".ResultActivity"></activity>
+        <activity android:name=".ResultActivity" />
+        <activity android:name=".OptionsActivity"></activity>
     </application>
 
 </manifest>
