@@ -13,7 +13,7 @@ import butterknife.ButterKnife;
 
 import static com.doomcat.madlibs.OptionsActivity.storyOption;
 
-public class ResultActivity extends AppCompatActivity {
+public class ResultActivity extends AppCompatActivity implements View.OnClickListener{
 
     @Bind(R.id.result) TextView mResultTextView;
     @Bind(R.id.replayButton) Button mReplayButton;
@@ -46,12 +46,13 @@ public class ResultActivity extends AppCompatActivity {
         //SET TEXT VIEW
         mResultTextView.setText(textGenerate(name, mood, verb, adjective));
 
-        mReplayButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent intent2 = new Intent(ResultActivity.this, MainActivity.class);
-                startActivity(intent2);
-            }
-        });
+        mReplayButton.setOnClickListener(this);
     }
+
+    @Override
+    public void onClick(View v){
+        Intent intent2 = new Intent(ResultActivity.this, MainActivity.class);
+        startActivity(intent2);
+    }
+
 }

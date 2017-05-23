@@ -16,7 +16,7 @@ import javax.annotation.Resource;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class FormActivity extends AppCompatActivity {
+public class FormActivity extends AppCompatActivity implements View.OnClickListener {
     //Cute tag for this activity
     public static final String TAG = MainActivity.class.getSimpleName();
 
@@ -39,22 +39,21 @@ public class FormActivity extends AppCompatActivity {
         mInfoTextView.setTypeface(robotoFont);
 
 
-        mSubmitButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                String name = mName.getText().toString();
-                String mood = mMood.getText().toString();
-                String verb = mVerb.getText().toString();
-                String adjective = mAdjective.getText().toString();
+        mSubmitButton.setOnClickListener(this);
+    }
 
-                Intent intent = new Intent(FormActivity.this, ResultActivity.class);
-                intent.putExtra("name", name);
-                intent.putExtra("mood", mood);
-                intent.putExtra("verb", verb);
-                intent.putExtra("adjective", adjective);
-                startActivity(intent);
-            }
-        });
-        ;
+    @Override
+    public void onClick(View v) {
+        String name = mName.getText().toString();
+        String mood = mMood.getText().toString();
+        String verb = mVerb.getText().toString();
+        String adjective = mAdjective.getText().toString();
+
+        Intent intent = new Intent(FormActivity.this, ResultActivity.class);
+        intent.putExtra("name", name);
+        intent.putExtra("mood", mood);
+        intent.putExtra("verb", verb);
+        intent.putExtra("adjective", adjective);
+        startActivity(intent);
     }
 }

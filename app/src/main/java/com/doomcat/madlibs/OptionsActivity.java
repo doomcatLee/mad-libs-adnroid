@@ -11,7 +11,7 @@ import android.widget.RadioButton;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class OptionsActivity extends AppCompatActivity {
+public class OptionsActivity extends AppCompatActivity implements View.OnClickListener{
     public static String storyOption;
     public static final String TAG = OptionsActivity.class.getSimpleName();
     @Bind(R.id.nextButton) Button mNextButton;
@@ -22,15 +22,17 @@ public class OptionsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_options);
         ButterKnife.bind(this);
 
-        mNextButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent intent = new Intent(OptionsActivity.this, FormActivity.class);
-                startActivity(intent);
-            }
-        });
+        mNextButton.setOnClickListener(this);
 
     }
+
+    @Override
+    public void onClick(View v){
+        Intent intent = new Intent(OptionsActivity.this, FormActivity.class);
+        startActivity(intent);
+    }
+
+
 
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
