@@ -13,31 +13,31 @@ import android.widget.TextView;
 
 import javax.annotation.Resource;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 public class FormActivity extends AppCompatActivity {
-
-
     //Cute tag for this activity
     public static final String TAG = MainActivity.class.getSimpleName();
 
     private TextView mInfoTextView;
-    private Button mSubmitButton;
-    private EditText mName;
-    private EditText mMood;
-    private EditText mVerb;
-    private EditText mAdjective;
+    @Bind(R.id.submitButton) Button mSubmitButton;
+    @Bind(R.id.nameEditText) EditText mName;
+    @Bind(R.id.moodEditText) EditText mMood;
+    @Bind(R.id.verbEditText) EditText mVerb;
+    @Bind(R.id.adjectiveEditText) EditText mAdjective;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form);
+        ButterKnife.bind(this);
 
-        mSubmitButton = (Button) findViewById(R.id.submitButton);
+        Typeface robotoFont = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
+        mInfoTextView = (TextView) findViewById(R.id.infoTextView);
+        mInfoTextView.setTypeface(robotoFont);
 
-        mName = (EditText) findViewById(R.id.nameEditText);
-        mMood = (EditText) findViewById(R.id.moodEditText);
-        mVerb = (EditText) findViewById(R.id.verbEditText);
-        mAdjective = (EditText) findViewById(R.id.adjectiveEditText);
 
         mSubmitButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -55,10 +55,6 @@ public class FormActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-        Typeface robotoFont = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
-        mInfoTextView = (TextView) findViewById(R.id.infoTextView);
-        mInfoTextView.setTypeface(robotoFont);
+        ;
     }
 }

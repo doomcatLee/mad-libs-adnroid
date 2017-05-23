@@ -7,12 +7,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 import static com.doomcat.madlibs.OptionsActivity.storyOption;
 
 public class ResultActivity extends AppCompatActivity {
 
-    private TextView mResultTextView;
-    private Button mReplayButton;
+    @Bind(R.id.result) TextView mResultTextView;
+    @Bind(R.id.replayButton) Button mReplayButton;
 
     public String textGenerate(String name, String mood, String verb, String adjective){
         if (storyOption == ("happy")){
@@ -30,9 +34,7 @@ public class ResultActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
-
-        mResultTextView = (TextView) findViewById(R.id.result);
-        mReplayButton = (Button) findViewById(R.id.replayButton);
+        ButterKnife.bind(this);
 
 
         Intent intent = getIntent();

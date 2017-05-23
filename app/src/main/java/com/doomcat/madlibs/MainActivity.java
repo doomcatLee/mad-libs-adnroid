@@ -10,10 +10,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
 
-    private Button mPlayButton;
-    private TextView mTitleTextView;
+    @Bind(R.id.playButton) Button mPlayButton;
+    @Bind(R.id.titleTextView) TextView mTitleTextView;
 
 
 
@@ -22,10 +25,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //match XML and java together
-        mPlayButton = (Button) findViewById(R.id.playButton);
-        mTitleTextView = (TextView) findViewById(R.id.titleTextView);
+        ButterKnife.bind(this);
 
         //TYPEFACES
         Typeface titleFont = Typeface.createFromAsset(getAssets(), "fonts/albas.ttf");

@@ -8,19 +8,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 
-public class OptionsActivity extends AppCompatActivity {
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
+public class OptionsActivity extends AppCompatActivity {
     public static String storyOption;
     public static final String TAG = OptionsActivity.class.getSimpleName();
-    private Button mNextButton;
+    @Bind(R.id.nextButton) Button mNextButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options);
+        ButterKnife.bind(this);
 
-        //Bind button
-        mNextButton = (Button) findViewById(R.id.nextButton);
         mNextButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
