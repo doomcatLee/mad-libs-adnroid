@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import static com.doomcat.madlibs.OptionsActivity.storyOption;
 
 public class ResultActivity extends AppCompatActivity {
 
@@ -14,7 +15,15 @@ public class ResultActivity extends AppCompatActivity {
     private Button mReplayButton;
 
     public String textGenerate(String a, String b, String c){
-        return ("Hello " + a + ", \nIt seems that you really really like " + b + " but you're kind of lame, because you can't travel to " + c + " right now.");
+        if (storyOption == ("happy")){
+            return ("Hello " + a + ", \nIt seems that you really really like " + b + " but you're kind of lame, because you can't travel to " + c + " right now.");
+        }else if (storyOption == ("sad")){
+            return "blank2";
+        }else if (storyOption == ("brutal")){
+            return "Brutal";
+        }else{
+            return "haha";
+        }
     }
 
     @Override

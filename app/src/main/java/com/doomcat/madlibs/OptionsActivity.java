@@ -10,6 +10,7 @@ import android.widget.RadioButton;
 
 public class OptionsActivity extends AppCompatActivity {
 
+    public static String storyOption;
     public static final String TAG = OptionsActivity.class.getSimpleName();
     private Button mNextButton;
 
@@ -38,14 +39,17 @@ public class OptionsActivity extends AppCompatActivity {
         switch(view.getId()) {
             case R.id.happyOption:
                 if (checked)
+                    storyOption = "happy";
                     Log.d(TAG, "HAPPY clicked");
                 break;
             case R.id.sadOption:
                 if (checked)
+                    storyOption = "sad";
                     Log.d(TAG, "SAD clicked");
                 break;
             case R.id.brutalOption:
                 if (checked)
+                    storyOption = "brutal";
                     Log.d(TAG, "BRUTAL clicked");
                 break;
         }
