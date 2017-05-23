@@ -15,6 +15,9 @@ public class MainActivity extends AppCompatActivity {
     private Button mPlayButton;
     private TextView mTitleTextView;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,9 +27,10 @@ public class MainActivity extends AppCompatActivity {
         mPlayButton = (Button) findViewById(R.id.playButton);
         mTitleTextView = (TextView) findViewById(R.id.titleTextView);
 
+        //TYPEFACES
+        Typeface titleFont = Typeface.createFromAsset(getAssets(), "fonts/albas.ttf");
         //SET TYPEFONT
-        Typeface font1 = Typeface.createFromAsset(getAssets(), "fonts/albas.ttf");
-        mTitleTextView.setTypeface(font1);
+        mTitleTextView.setTypeface(titleFont);
 
 
         //Attach click event listener
