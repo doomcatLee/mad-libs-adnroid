@@ -20,16 +20,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:text="Play Again"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/replayButton" />
-
     <TextView
-        android:text="asdasda,asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasda"
+        android:text="Testing for testing to testing so testing for testing to testing so testing..."
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/result"
@@ -38,5 +30,13 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Play Again"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:id="@+id/replayButton"
+        android:layout_alignParentBottom="true" />
 
 </RelativeLayout>
