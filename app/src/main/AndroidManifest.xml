@@ -8,16 +8,30 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FormActivity" />
+        <activity android:name=".FormActivity">
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.doomcat.madlibs.OptionsActivity">
+            </meta-data>
+        </activity>
         <activity android:name=".ResultActivity" />
-        <activity android:name=".OptionsActivity"></activity>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.doomcat.madlibs.FormActivity">
+            </meta-data>
+        <activity android:name=".OptionsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.doomcat.madlibs.MainActivity">
+            </meta-data>
+        </activity>
     </application>
 
 </manifest>
