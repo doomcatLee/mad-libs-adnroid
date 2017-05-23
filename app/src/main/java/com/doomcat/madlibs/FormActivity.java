@@ -36,11 +36,10 @@ public class FormActivity extends AppCompatActivity {
                 String place = mPlace.getText().toString();
                 String food = mFood.getText().toString();
 
-                Log.d(TAG, name);
-                Log.d(TAG, place);
-                Log.d(TAG, food);
-
                 Intent intent = new Intent(FormActivity.this, ResultActivity.class);
+                intent.putExtra("name", name);
+                intent.putExtra("place", place);
+                intent.putExtra("food", food);
                 startActivity(intent);
             }
         });

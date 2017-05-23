@@ -14,11 +14,11 @@
         android:text="RESULT ACTIVITY"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_marginLeft="72dp"
         android:layout_marginStart="72dp"
-        android:layout_marginTop="68dp"
-        android:id="@+id/textView2" />
+        android:layout_marginTop="66dp"
+        android:id="@+id/result"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

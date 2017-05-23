@@ -9,9 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-
-//    private Resources res = getResources();
-//    private String[] words = res.getStringArray(R.array.words);
+    
     private Button mPlayButton;
 
     @Override
