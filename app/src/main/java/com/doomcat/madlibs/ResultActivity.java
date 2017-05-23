@@ -12,6 +12,10 @@ public class ResultActivity extends AppCompatActivity {
     private TextView mResultTextView;
     private Button mButton;
 
+    public String textGenerate(String a, String b, String c){
+        return ("Hello " + a + ", it seems that you really really like " + b + " but you're kind of lame, because you can travel to " + c + ".");
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +31,6 @@ public class ResultActivity extends AppCompatActivity {
         String food = intent.getStringExtra("food");
 
 
-        mResultTextView.setText("Testing" + name + place + food);
+        mResultTextView.setText(textGenerate(name,food,place));
     }
 }

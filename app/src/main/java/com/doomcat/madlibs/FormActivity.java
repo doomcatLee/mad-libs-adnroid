@@ -13,8 +13,6 @@ import javax.annotation.Resource;
 
 public class FormActivity extends AppCompatActivity {
 
-    Resources res = getResources();
-    String[] arr = res.getStringArray(R.array.words);
 
     //Cute tag for this activity
     public static final String TAG = MainActivity.class.getSimpleName();
