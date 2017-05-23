@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_result"
     android:layout_width="match_parent"
@@ -10,15 +11,32 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.doomcat.madlibs.ResultActivity">
 
-    <TextView
-        android:text="RESULT ACTIVITY"
+    <ImageView
+        android:layout_width="wrap_content"
+        app:srcCompat="@drawable/pug"
+        android:id="@+id/pugBG"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="241dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Play Again"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="72dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="66dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/replayButton" />
+
+    <TextView
+        android:text="asdasda,asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/result"
-        android:layout_alignParentTop="true"
+        android:textSize="28sp"
+        android:height="240sp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
 </RelativeLayout>
