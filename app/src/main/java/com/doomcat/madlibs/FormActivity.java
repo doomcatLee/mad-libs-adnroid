@@ -1,6 +1,7 @@
 package com.doomcat.madlibs;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,7 +9,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import javax.annotation.Resource;
+
 public class FormActivity extends AppCompatActivity {
+
+    Resources res = getResources();
+    String[] arr = res.getStringArray(R.array.words);
 
     //Cute tag for this activity
     public static final String TAG = MainActivity.class.getSimpleName();
