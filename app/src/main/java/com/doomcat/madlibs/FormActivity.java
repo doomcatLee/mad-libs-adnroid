@@ -38,22 +38,23 @@ public class FormActivity extends AppCompatActivity implements View.OnClickListe
         mInfoTextView = (TextView) findViewById(R.id.infoTextView);
         mInfoTextView.setTypeface(robotoFont);
 
-
         mSubmitButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        String name = mName.getText().toString();
-        String mood = mMood.getText().toString();
-        String verb = mVerb.getText().toString();
-        String adjective = mAdjective.getText().toString();
+        if (v ==mSubmitButton){
+            String name = mName.getText().toString();
+            String mood = mMood.getText().toString();
+            String verb = mVerb.getText().toString();
+            String adjective = mAdjective.getText().toString();
 
-        Intent intent = new Intent(FormActivity.this, ResultActivity.class);
-        intent.putExtra("name", name);
-        intent.putExtra("mood", mood);
-        intent.putExtra("verb", verb);
-        intent.putExtra("adjective", adjective);
-        startActivity(intent);
+            Intent intent = new Intent(FormActivity.this, ResultActivity.class);
+            intent.putExtra("name", name);
+            intent.putExtra("mood", mood);
+            intent.putExtra("verb", verb);
+            intent.putExtra("adjective", adjective);
+            startActivity(intent);
+        }
     }
 }

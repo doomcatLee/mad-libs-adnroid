@@ -51,8 +51,12 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v){
-        Intent intent2 = new Intent(ResultActivity.this, MainActivity.class);
-        startActivity(intent2);
+
+        if ( v == mReplayButton){
+            Intent intent2 = new Intent(ResultActivity.this, MainActivity.class);
+            startActivity(intent2);
+        }
+
     }
 
 }

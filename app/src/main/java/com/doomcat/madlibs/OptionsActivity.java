@@ -28,8 +28,11 @@ public class OptionsActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View v){
-        Intent intent = new Intent(OptionsActivity.this, FormActivity.class);
-        startActivity(intent);
+        if(v == mNextButton){
+            Intent intent = new Intent(OptionsActivity.this, FormActivity.class);
+            startActivity(intent);
+        }
+
     }
 
 
