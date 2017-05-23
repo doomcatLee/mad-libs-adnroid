@@ -22,8 +22,9 @@ public class FormActivity extends AppCompatActivity {
     private TextView mInfoTextView;
     private Button mSubmitButton;
     private EditText mName;
-    private EditText mFood;
-    private EditText mPlace;
+    private EditText mMood;
+    private EditText mVerb;
+    private EditText mAdjective;
 
 
     @Override
@@ -34,20 +35,23 @@ public class FormActivity extends AppCompatActivity {
         mSubmitButton = (Button) findViewById(R.id.submitButton);
 
         mName = (EditText) findViewById(R.id.nameEditText);
-        mFood = (EditText) findViewById(R.id.foodEditText);
-        mPlace = (EditText) findViewById(R.id.placeEditText);
+        mMood = (EditText) findViewById(R.id.moodEditText);
+        mVerb = (EditText) findViewById(R.id.verbEditText);
+        mAdjective = (EditText) findViewById(R.id.adjectiveEditText);
 
         mSubmitButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 String name = mName.getText().toString();
-                String place = mPlace.getText().toString();
-                String food = mFood.getText().toString();
+                String mood = mMood.getText().toString();
+                String verb = mVerb.getText().toString();
+                String adjective = mAdjective.getText().toString();
 
                 Intent intent = new Intent(FormActivity.this, ResultActivity.class);
                 intent.putExtra("name", name);
-                intent.putExtra("place", place);
-                intent.putExtra("food", food);
+                intent.putExtra("mood", mood);
+                intent.putExtra("verb", verb);
+                intent.putExtra("adjective", adjective);
                 startActivity(intent);
             }
         });

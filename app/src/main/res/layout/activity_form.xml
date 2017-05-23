@@ -28,15 +28,16 @@
         android:layout_centerHorizontal="true"
         android:textSize="30sp"/>
 
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:hint="Favorite place"
+        android:hint="Your current mood"
         android:ems="10"
-        android:id="@+id/placeEditText"
-        android:layout_marginTop="86dp"
-        android:layout_below="@+id/nameEditText"
+        android:id="@+id/moodEditText"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/verbEditText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -44,22 +45,34 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:hint="Favorite food"
+        android:hint="Enter a verb"
         android:ems="10"
-        android:id="@+id/foodEditText"
-        android:layout_marginTop="87dp"
-        android:layout_below="@+id/placeEditText"
+        android:id="@+id/verbEditText"
+        android:layout_below="@+id/adjectiveEditText"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:hint="Name"
+        android:hint="Your name"
         android:ems="10"
         android:id="@+id/nameEditText"
-        android:layout_marginTop="47dp"
+        android:layout_marginBottom="60dp"
+        android:layout_alignBottom="@+id/adjectiveEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Enter an adjective"
+        android:ems="10"
+        android:id="@+id/adjectiveEditText"
+        android:layout_marginTop="98dp"
         android:layout_below="@+id/infoTextView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />

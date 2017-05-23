@@ -14,15 +14,15 @@ public class ResultActivity extends AppCompatActivity {
     private TextView mResultTextView;
     private Button mReplayButton;
 
-    public String textGenerate(String a, String b, String c){
+    public String textGenerate(String name, String mood, String verb, String adjective){
         if (storyOption == ("happy")){
-            return ("Hello " + a + ", \nIt seems that you really really like " + b + " but you're kind of lame, because you can't travel to " + c + " right now.");
+            return ("The name, " + name + " is a " + adjective + " name for someone like you. Keep " + verb + "ing and stay " + mood);
         }else if (storyOption == ("sad")){
-            return "blank2";
+            return ("Hello " + name + ", \nIt turns out your friends and family decided to " + verb + " you. It's probably because you are " + adjective + " and " + mood);
         }else if (storyOption == ("brutal")){
-            return "Brutal";
+            return (name + ", you're a shithead.");
         }else{
-            return "haha";
+            return null;
         }
     }
 
@@ -37,11 +37,12 @@ public class ResultActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String name = intent.getStringExtra("name");
-        String place = intent.getStringExtra("place");
-        String food = intent.getStringExtra("food");
+        String verb = intent.getStringExtra("verb");
+        String mood = intent.getStringExtra("mood");
+        String adjective = intent.getStringExtra("adjective");
 
         //SET TEXT VIEW
-        mResultTextView.setText(textGenerate(name, food, place));
+        mResultTextView.setText(textGenerate(name, mood, verb, adjective));
 
         mReplayButton.setOnClickListener(new View.OnClickListener(){
             @Override

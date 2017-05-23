@@ -11,7 +11,7 @@
     tools:context="com.doomcat.madlibs.OptionsActivity">
 
     <TextView
-        android:text="Which story would you like to be in?"
+        android:text="What type of story do you like?"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
